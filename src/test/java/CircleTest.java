@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Random;
@@ -7,6 +8,7 @@ class CircleTest {
     private static Random rand = new Random();
 
     @Test
+    @DisplayName("[1] Test Constructor")
     void constructor() {
         double x = rand.nextInt(100);
         double y = rand.nextInt(100);
@@ -24,6 +26,7 @@ class CircleTest {
     }
 
     @Test
+    @DisplayName("[1] Test getRadius")
     void getRadius() {
         double x = rand.nextInt(100);
         double y = rand.nextInt(100);
@@ -36,6 +39,7 @@ class CircleTest {
     }
 
     @Test
+    @DisplayName("[2] Test getLocation")
     void getLocation() {
         double x = rand.nextInt(100);
         double y = rand.nextInt(100);
@@ -52,6 +56,7 @@ class CircleTest {
     }
 
     @Test
+    @DisplayName("[1] Test setRadius")
     void setRadius() {
         double x = rand.nextInt(100);
         double y = rand.nextInt(100);
@@ -65,6 +70,7 @@ class CircleTest {
     }
 
     @Test
+    @DisplayName("[2] Test setLocation")
     void setLocation() {
         double x = rand.nextInt(100);
         double y = rand.nextInt(100);
@@ -83,6 +89,7 @@ class CircleTest {
     }
 
     @Test
+    @DisplayName("[3] Test contains")
     void contains() {
 
         Point center = new Point(9,21);
@@ -102,6 +109,7 @@ class CircleTest {
     }
 
     @Test
+    @DisplayName("[3] Test intersects")
     void intersects() {
         double x = rand.nextInt(50);
         double y = rand.nextInt(50);
