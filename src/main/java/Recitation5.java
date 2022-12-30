@@ -6,7 +6,5 @@ public class Recitation5 {
         Scanner scan = new Scanner(System.in);
 
         // add your code here
-
-        return;
     }
 }

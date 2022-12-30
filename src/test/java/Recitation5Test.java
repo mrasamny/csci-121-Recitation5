@@ -9,9 +9,12 @@ class Recitation5Test extends OutputTest{
     void test_main_1() {
         setTestInput("12\n14");
         Recitation5.main(new String[]{});
-        String expected = "Circles intersect!";
+        String expected = "Enter x:\n" +
+                "Enter y:\n" +
+                "Circles intersect!\n";
         String actual = getTestOutput();
         String message = "Test Failed!\nExpecting:\n"+expected+"\nActual:\n"+actual;
+        expected = "^"+expected+"$";
         assertTrue(Pattern.compile(expected.replaceAll("\\s",""))
                         .matcher(actual.replaceAll("\\s","")).find(),
                 message);
@@ -23,9 +26,12 @@ class Recitation5Test extends OutputTest{
     void test_main_2() {
         setTestInput("200\n300");
         Recitation5.main(new String[]{});
-        String expected = "Circles do not intersect!";
+        String expected = "Enter x:\n" +
+                "Enter y:\n" +
+                "Circles do not intersect!\n";
         String actual = getTestOutput();
         String message = "Test Failed!\nExpecting:\n"+expected+"\nActual:\n"+actual;
+        expected = "^"+expected+"$";
         assertTrue(Pattern.compile(expected.replaceAll("\\s",""))
                         .matcher(actual.replaceAll("\\s","")).find(),
                 message);
